@@ -34,5 +34,10 @@ def create_songs
   end
 end
 
+def create_user
+  User.create!
+end
+
 create_albums
 create_songs
+create_user
