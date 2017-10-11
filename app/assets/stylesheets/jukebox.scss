@@ -212,14 +212,14 @@ $tracknum-selectedtag: #90B9C9;
       height: 30px;
       width: 30px;
       margin-left: 15px;
-      background: url(star-unselected.png) no-repeat;
+      background: image-url(star-unselected.png) no-repeat;
       fill: $light-grey;
       background-size: 30px 30px;
 
     }
 
     .star.favorite {
-      background: url(star-favorite.png) no-repeat;
+      background: image-url(star-favorite.png) no-repeat;
       background-size: 30px 30px;
     }
 
@@ -253,13 +253,13 @@ $tracknum-selectedtag: #90B9C9;
     }
 
     .star {
-      background: url(star-unselected-hover.png) no-repeat;
+      background: image-url(star-unselected-hover.png) no-repeat;
       background-size: 30px 30px;
 
     }
 
     .star.favorite {
-      background: url(star-favorite-hover.png) no-repeat;
+      background: image-url(star-favorite-hover.png) no-repeat;
       background-size: 30px 30px;
     }
 
