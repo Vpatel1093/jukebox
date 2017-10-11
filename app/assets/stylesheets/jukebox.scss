@@ -43,8 +43,105 @@ $tracknum-selectedtag: #90B9C9;
 
 .selected-album {
   background-color: $selected-hover;
+  box-shadow: none;
 
   h1,h2 {
     color: #fff !important;
+  }
+}
+
+.album-songs {
+  margin: 0 auto;
+  box-shadow: 0px 0px 3px 3px $light-grey;
+  height: 280px;
+  width: 720px;
+
+  .song {
+    height: 56px;
+    width: 100%;
+    border-bottom: 2px solid $light-grey;
+    background-color: #f4f4f7;
+
+
+    * {
+      display: inline-block;
+      line-height: 55px;
+      vertical-align: middle;
+    }
+
+    .song-order {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      margin-left: 20px;
+      background-color: $tracknum-selectedtag;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .star {
+      height: 30px;
+      width: 30px;
+      margin-left: 15px;
+      background: url(star-unselected.png) no-repeat;
+      fill: $light-grey;
+      background-size: 30px 30px;
+
+    }
+
+    .star.favorite {
+      background: url(star-favorite.png) no-repeat;
+      background-size: 30px 30px;
+    }
+
+    .song-name {
+      margin-left: 15px;
+      font-size: 18px;
+      color: $selected-hover;
+    }
+
+    .song-label {
+      height: 35px;
+      width: 100px;
+      text-align: center;
+      line-height: 35px;
+      margin-left: 12px;
+      background-color: $light-grey;
+      font-size: 14px;
+    }
+
+    .song-duration {
+      float: right;
+      margin-right: 20px;
+      font-size: 18px;
+    }
+  }
+  .song:hover {
+    background-color: $selected-hover;
+
+    * {
+      color: #fff;
+    }
+
+    .star {
+      background: url(star-unselected-hover.png) no-repeat;
+      background-size: 30px 30px;
+
+    }
+
+    .star.favorite {
+      background: url(star-favorite-hover.png) no-repeat;
+      background-size: 30px 30px;
+    }
+
+    .song-label {
+      background-color: $tracknum-selectedtag;
+    }
+
+  }
+  div:last-of-type {
+    border-bottom: none;
   }
 }
