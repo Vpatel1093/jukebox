@@ -110,7 +110,7 @@ $tracknum-selectedtag: #90B9C9;
     margin-left: 0;
     margin-right: 0;
     box-shadow: 0px 0px 3px 3px $light-grey;
-    position: relative;
+    position: absolute;
     background-color: #fff;
 
     img {
@@ -152,26 +152,26 @@ $tracknum-selectedtag: #90B9C9;
   }
 
   .position2 {
-    top: 30px;
-    left: -5%;
+    top: 67px;
+    left: 22%;
     z-index: 20;
   }
 
   .position3 {
-    top: -3px;
-    left: -45%;
+    top: 34px;
+    left: 10%;
     z-index: 10;
   }
 
   .position4 {
-    top: -403px;
-    left: 66%;
+    top: 34px;
+    right: 10%;
     z-index: 10;
   }
 
   .position5 {
-    top: -406px;
-    left: 25%;
+    top: 67px;
+    right: 22%;
     z-index: 20;
   }
 }
