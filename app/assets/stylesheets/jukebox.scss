@@ -1,3 +1,50 @@
 // Place all the styles related to the Jukebox controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+$selected-hover: #0085B2;
+$down: #00698C;
+$light-grey: #DDDDDD;
+$favorite: #D9D900;
+$tracknum-selectedtag: #90B9C9;
+
+.album {
+  height: 400px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0px 0px 3px 3px $light-grey;
+
+  img {
+    height: 220px;
+    width: 220px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+
+  h1 {
+    width: 290px;
+    margin: 0 auto;
+    font-weight: 300;
+    color: $selected-hover;
+    font-size: 30px;
+  }
+
+  h2 {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 22px;
+  }
+}
+
+.selected-album {
+  background-color: $selected-hover;
+
+  h1,h2 {
+    color: #fff !important;
+  }
+}
