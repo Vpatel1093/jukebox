@@ -30,17 +30,17 @@ ActiveRecord::Schema.define(version: 20171010161740) do
     t.string   "song_duration"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.integer  "user_id"
     t.integer  "album_id"
     t.index ["album_id"], name: "index_songs_on_album_id", using: :btree
+    t.index ["user_id"], name: "index_songs_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "song_id"
-    t.index ["song_id"], name: "index_users_on_song_id", using: :btree
   end
 
   add_foreign_key "songs", "albums"
-  add_foreign_key "users", "songs"
+  add_foreign_key "songs", "users"
 end

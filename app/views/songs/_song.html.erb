@@ -1,6 +1,13 @@
 <div class="song">
   <div class="song-order"><%= song.song_order %></div>
-  <div class="favorite">&#9734;</div>
+  <div class="star <%= 'favorite' if @user.favorite_songs.include?(song) %>"></div>
   <div class="song-name"><%= song.song_name %></div>
+  <% unless song.song_label == nil %>
+    <% song.song_label.each do |label| %>
+      <div class="song-label">
+        <%= label %>
+      </div>
+    <% end %>
+  <% end %>
   <div class="song-duration"><%= song.song_duration %></div>
 </div>

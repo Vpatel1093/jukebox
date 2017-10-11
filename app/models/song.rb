@@ -8,6 +8,7 @@ class Song < ApplicationRecord
   validates_presence_of :album_id
 
   belongs_to :album
+  belongs_to :user, optional: true
 
   LABELS = ['explicit','upbeat','slow']
 

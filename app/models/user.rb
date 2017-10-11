@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  has_many :favorite_songs, foreign_key: "song_id", class_name: "Song"
+  has_many :favorite_songs, class_name: "Song", foreign_key: "user_id"
 end
