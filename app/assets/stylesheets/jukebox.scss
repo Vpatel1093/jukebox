@@ -14,6 +14,10 @@ $favorite: #D9D900;
 $tracknum-selectedtag: #90B9C9;
 
 .carousel-container {
+  position: relative;
+  height: 500px;
+  width: 100%;
+
   * {
     display: inline-block;
   }
@@ -24,7 +28,8 @@ $tracknum-selectedtag: #90B9C9;
     border: 2px solid $light-grey;
     border-radius: 10px;
     text-align: center;
-    position: relative;
+    position: absolute;
+    top: 300px;
 
     // Create right arrow
     .arrow {
@@ -59,6 +64,15 @@ $tracknum-selectedtag: #90B9C9;
     }
 
   }
+
+  .arrow-container:first-of-type {
+    left: 5px;
+  }
+
+  .arrow-container:last-of-type {
+    right: 5px;
+  }
+
   .arrow-container:hover {
     background-color: $selected-hover;
     border: none;
@@ -91,9 +105,13 @@ $tracknum-selectedtag: #90B9C9;
 
   .album {
     height: 400px;
-    width: 340px;
+    width: 330px;
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
     box-shadow: 0px 0px 3px 3px $light-grey;
+    position: relative;
+    background-color: #fff;
 
     img {
       height: 220px;
@@ -117,7 +135,7 @@ $tracknum-selectedtag: #90B9C9;
     }
   }
 
-  .selected-album {
+  .active-album {
     background-color: $selected-hover;
     box-shadow: none;
 
@@ -125,13 +143,45 @@ $tracknum-selectedtag: #90B9C9;
       color: #fff !important;
     }
   }
+
+  .position1 {
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+  }
+
+  .position2 {
+    top: 30px;
+    left: -5%;
+    z-index: 20;
+  }
+
+  .position3 {
+    top: -3px;
+    left: -45%;
+    z-index: 10;
+  }
+
+  .position4 {
+    top: -403px;
+    left: 66%;
+    z-index: 10;
+  }
+
+  .position5 {
+    top: -406px;
+    left: 25%;
+    z-index: 20;
+  }
 }
 
 .album-songs {
   margin: 0 auto;
-  box-shadow: 0px 0px 3px 3px $light-grey;
+  box-shadow: 0px 6px 3px 5px $light-grey;
   height: 280px;
   width: 720px;
+  display: none;
 
   .song {
     height: 56px;
@@ -221,4 +271,10 @@ $tracknum-selectedtag: #90B9C9;
   div:last-of-type {
     border-bottom: none;
   }
+
+}
+
+.active-album-songs {
+  display: block;
+  margin-bottom: 14px;
 }
