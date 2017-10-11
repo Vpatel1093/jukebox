@@ -1,4 +1,20 @@
-<%= render @albums %>
+<div class="carousel-container">
+  <div class="arrow-container">
+    <div class="arrow" id="left-arrow">
+      <div class="arrow-stem"></div>
+      <div class="arrow-head"></div>
+    </div>
+  </div>
+
+  <%= render @albums %>
+
+  <div class="arrow-container">
+    <div class="arrow" id="right-arrow">
+      <div class="arrow-stem"></div>
+      <div class="arrow-head"></div>
+    </div>
+  </div>
+</div>
 
 <div class="album-songs" id="album1-songs">
   <%= render @album1_songs %>
